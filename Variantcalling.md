@@ -18,13 +18,13 @@ The specific ways variant DNA sequences appear can be categorized into three gro
 ## Strategies (examples to be added)
 
 Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers may choose depending on the actual data and sample type.
+#### Bayes' Method
+The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities ( **P(G)** ), create error models for data observations ( P(D|G) ), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
 
 ![](https://lh3.googleusercontent.com/QHvwDhbFs47V-HfDZGuk91MfAfKusgexNQ_HP4MQHkrJgZcjkd2MowWURpBWBmd5fGqsT1BRxssBPCJ4jZqXeGDTxTrvrR2eHLUZp9NdJMHy7bbFQS4IR3NYUWPiSFYZi2NIyNHz)
 
 Figure 2: Bayes’ Theorem
-
-#### Bayes' Method
-The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities ( **P(G)** ), create error models for data observations ( P(D|G) ), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
+<br>
 
 #### Heuristic Method
 Heuristic based algorithms serve as an alternative method. Instead of calculating genotype possibilities, researchers would use a list of heuristic factors to set the bounds for variant calling. Those factors might include minimum allele counts, read quality cut-offs, and depth levels of read coverage. Though a relatively unpopular approach, the method could robustly outly data that violate the assumptions of probabilistic models.
@@ -216,6 +216,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQ5OTUxMCwxNjIwODczMjI2LC00NT
-QzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbMzU1Njc3MjQyLDE2MjA4NzMyMjYsLTQ1ND
+MxMzY0M119
 -->
