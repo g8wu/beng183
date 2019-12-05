@@ -42,9 +42,9 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 
 ## Demo
 We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are:
-*  FastQC: quality check of reads
+*  *FastQC*: quality check of reads
 * samtools: alignment
-* bwa: variant calling algorithm
+* bwa mem (Burrows-Wheeler Alignment): alignment
 * VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
 
 ```
@@ -221,6 +221,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNDg1MDczOCwtODUwNDEwNzM2LDE2Mj
-A4NzMyMjYsLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbNTYzOTUwNjAxLC04NTA0MTA3MzYsMTYyMD
+g3MzIyNiwtNDU0MzEzNjQzXX0=
 -->
