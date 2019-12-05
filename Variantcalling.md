@@ -95,7 +95,6 @@ do
 done
 ```
 
-
 ### Galaxy Tool Variant Calling Pipeline
 Another demo using the Galaxy tool for variant calling in different settings (diploid/haploid, somatic/germline).
 
@@ -217,6 +216,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MTgxNDc1NCwxNjIwODczMjI2LC00NT
+eyJoaXN0b3J5IjpbLTg1MDQxMDczNiwxNjIwODczMjI2LC00NT
 QzMTM2NDNdfQ==
 -->
