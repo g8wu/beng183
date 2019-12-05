@@ -44,20 +44,21 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are FastQC for quality check, samtools for alignment, VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
 
 Setup utput file and reference genome file:
-	file=log.txt
+```
+file=log.txt
 end=.fastq.gz
 ref=tuberculosis.fasta
->bwa index $ref
+bwa index $ref
 
-Start variant calling pipeline on all read files:
->echo "Executing main commands" | tee -a $file
+# Start variant calling pipeline on all read files:
+echo "Executing main commands" | tee -a $file
 for prefix in ERR2432987 ERR2432988 ERR2432989 ERR2433004 ERR2433005 ERR2433006
 do
 
->echo "Running fastqc on ${prefix}" | tee -a $file
->fastqc -o . \${prefix}_1${end} \${prefix}_2${end} | tee -a $file
+echo "Running fastqc on ${prefix}" | tee -a $file
+fastqc -o . \${prefix}_1${end} \${prefix}_2${end} | tee -a $file
 
->echo "Running sickle with q.c. of 30" | tee -a $file
+echo "Running sickle with q.c. of 30" | tee -a $file
 sickle pe -q 30 -f \${prefix}_1${end} -r \${prefix}_2${end} -t sanger \
 -o ${prefix}_t1.fastq -p ${prefix}_t2.fastq -s singletons.fastq \
 | tee -a $file
@@ -216,6 +217,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NDIwMjM3MCwxNjIwODczMjI2LC00NT
-QzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbLTE4ODQ3NzQyMjMsMTYyMDg3MzIyNiwtND
+U0MzEzNjQzXX0=
 -->
