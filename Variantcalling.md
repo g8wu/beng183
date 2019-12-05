@@ -107,7 +107,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
   
 
 ## References:
-<p> [1] [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) </p>
+[1] [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies)
 [2] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
 Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
 * [Wikipedia for variant calling](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
@@ -119,6 +119,6 @@ Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-W
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTY4OTY0MzQsLTg1MDQxMDczNiwxNj
-IwODczMjI2LC00NTQzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbNzUzMDczNzQ1LC04NTA0MTA3MzYsMTYyMD
+g3MzIyNiwtNDU0MzEzNjQzXX0=
 -->
