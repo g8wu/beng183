@@ -108,17 +108,19 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 ## References:
 [1] [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies)
-[2] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
-Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
-* [Wikipedia for variant calling](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
-* [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
-* [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
+[2] [Wikipedia for variant calling](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
+
+[3] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
+* Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
+
+[x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
+[x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzMDczNzQ1LC04NTA0MTA3MzYsMTYyMD
-g3MzIyNiwtNDU0MzEzNjQzXX0=
+eyJoaXN0b3J5IjpbLTMxNjc2ODQxOCwtODUwNDEwNzM2LDE2Mj
+A4NzMyMjYsLTQ1NDMxMzY0M119
 -->
