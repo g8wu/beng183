@@ -41,7 +41,10 @@ Because this is a comparative analysis, the algorithms can differ depending on s
 More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
 
 ## Demo
-We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are FastQC for quality check, samtools for alignment, VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
+We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are:
+*  FastQC: quality check of reads
+* samtools: alignment
+* VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
 
 ```
 # Setup utput file and reference genome file:
@@ -216,6 +219,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MDQxMDczNiwxNjIwODczMjI2LC00NT
-QzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbLTIyNDUyMzU1NiwtODUwNDEwNzM2LDE2Mj
+A4NzMyMjYsLTQ1NDMxMzY0M119
 -->
