@@ -6,11 +6,10 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instructs our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
 
 ![](https://lh5.googleusercontent.com/qMHGyWK7bNoCyqGRVV26Wtn3c60NBndyTrE3GFUSI86Ze0PsbXD8XKLZBBpOk7zvzDxvtSG8eWYidlEQ0syJ7mmAbpVd9jVrESjktlQoSNNX3O1nTTY6gOZp5i91JzzKv1LurWI_)
-
 ![](https://lh5.googleusercontent.com/A8RiVY5lFSStGaDh0rTB6NDrBZ_jmontaecz8IaWyXUo9EnxMki4mcylBvYgkBzmyo_-dYeqigTDneC0KVMjtkpggb9m6BnmggUqjQAG3xIYOb6Et0O5ZClYXaGv0NMzdks3VvtC)
 
-Figure 1a: SNP Example 
-Figure 1b: Indel Example
+*Figure 1a: SNP Example*
+*Figure 1b: Indel Example*
 
   
 The specific ways variant DNA sequences appear can be categorized into three groups: SNPs, indels, and structural variations. Single nucleotide polymorphisms (SNPs) represent differences of a single nucleotide. Indels are insertions and deletions of segments of DNA and not as common as SNPs. Structural variations are much larger and typically characterized as more than 1 kb in length. These segments can be inverted, translocated, or copied redundantly within the genome. Variant calling is the process by which these variations are identified from sequence data.
@@ -123,7 +122,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MzA1NTcwNCwtMjE5OTQyMDIxLC01MT
-QzOTY2MzUsLTg1MDQxMDczNiwxNjIwODczMjI2LC00NTQzMTM2
-NDNdfQ==
+eyJoaXN0b3J5IjpbLTYwNDU2MTE0MiwxNzczMDU1NzA0LC0yMT
+k5NDIwMjEsLTUxNDM5NjYzNSwtODUwNDEwNzM2LDE2MjA4NzMy
+MjYsLTQ1NDMxMzY0M119
 -->
