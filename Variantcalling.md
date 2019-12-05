@@ -6,7 +6,7 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instructs our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
 
 <p float="left">
-  <img src='/pictures/snp.png' height='400'/>
+  <img src='/pictures/snp.png' width='200'/>
   <img src='/pictures/indel.png'  width='400'/>
 </p>
 
@@ -124,7 +124,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDIyNTUxMCwxNzA2MTg1NjkyLC0xNj
+eyJoaXN0b3J5IjpbMTUwODIxOTYzMSwxNzA2MTg1NjkyLC0xNj
 AzNTY5MDEsLTE0MTY1MTI3NjAsLTcxOTIyOTY2OSwtNjA0NTYx
 MTQyLDE3NzMwNTU3MDQsLTIxOTk0MjAyMSwtNTE0Mzk2NjM1LC
 04NTA0MTA3MzYsMTYyMDg3MzIyNiwtNDU0MzEzNjQzXX0=
