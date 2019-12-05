@@ -44,7 +44,7 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final BAM files that show variant sequences and locations. The tools used:
 *  **FastQC**: quality check of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
-* **samtools**: file conversion[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+* **samtools**: file conversion[<sup>[3]</sup>](http://samtools.sourceforge.net)
 * **VarScan**: [<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 
 * VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
@@ -123,6 +123,6 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODkzMjg4NTMsLTg1MDQxMDczNiwxNj
-IwODczMjI2LC00NTQzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbLTUxNDM5NjYzNSwtODUwNDEwNzM2LDE2Mj
+A4NzMyMjYsLTQ1NDMxMzY0M119
 -->
