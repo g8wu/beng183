@@ -41,14 +41,11 @@ Because this is a comparative analysis, the algorithms can differ depending on s
 More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
 
 ## Demo
-We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final BAM files that show variant sequences and locations. The tools used:
+We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final VCF file visualizations. The tools used:
 *  **FastQC**: quality check of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **samtools**: file conversion[<sup>[3]</sup>](http://samtools.sourceforge.net)
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
-
-* VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
-
 ```
 # Setup utput file and reference genome file:
 file=log.txt
@@ -126,6 +123,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTk0MjAyMSwtNTE0Mzk2NjM1LC04NT
-A0MTA3MzYsMTYyMDg3MzIyNiwtNDU0MzEzNjQzXX0=
+eyJoaXN0b3J5IjpbMTc2NzU3NDk4NCwtMjE5OTQyMDIxLC01MT
+QzOTY2MzUsLTg1MDQxMDczNiwxNjIwODczMjI2LC00NTQzMTM2
+NDNdfQ==
 -->
