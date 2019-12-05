@@ -23,8 +23,10 @@ Different variant calling methods rely on several kinds of general strategies, i
 
 Figure 2: Bayes’ Theorem
 
+#### Bayes' Method
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities ( P(G) ), create error models for data observations ( P(D|G) ), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
 
+#### Heuristic Method
 Heuristic based algorithms serve as an alternative method. Instead of calculating genotype possibilities, researchers would use a list of heuristic factors to set the bounds for variant calling. Those factors might include minimum allele counts, read quality cut-offs, and depth levels of read coverage. Though a relatively unpopular approach, the method could robustly outly data that violate the assumptions of probabilistic models.
 
 Machine learning represents researchers’ recent attempts to optimize the current variant calling methods. Relying on convolutional neural network (CNN), the method is able to magically output genotype likelihoods. Researchers currently have few practical ways to understand the nature of these neural networks, but try their best to make sure that the accuracy of input data meet their expectations.
@@ -213,5 +215,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbMjMzNTg2MjE0LC00NTQzMTM2NDNdfQ==
 -->
