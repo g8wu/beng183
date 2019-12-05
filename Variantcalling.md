@@ -5,8 +5,8 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 ## Introduction
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instructs our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
 <p float="left">
-  <img src="https://github.com/g8wu/beng183/pictures/bayes.svg" />
-  <img src="https://github.com/g8wu/beng183/pictures/indel.png" />
+  <img src="https://github.com/g8wu/beng183/pictures/bayes.svg" width='350'/>
+  <img src="https://github.com/g8wu/beng183/pictures/indel.png"  width='350'/>
 </p>
 *Figure 1a: SNP Example*
 *Figure 1b: Indel Example*
@@ -21,7 +21,7 @@ Different variant calling methods rely on several kinds of general strategies, i
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities ( **P(G)** ), create error models for data observations ( P(D|G) ), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
 
 ![](https://lh3.googleusercontent.com/QHvwDhbFs47V-HfDZGuk91MfAfKusgexNQ_HP4MQHkrJgZcjkd2MowWURpBWBmd5fGqsT1BRxssBPCJ4jZqXeGDTxTrvrR2eHLUZp9NdJMHy7bbFQS4IR3NYUWPiSFYZi2NIyNHz)
-
+<img src="https://github.com/g8wu/beng183/pictures/bayes.svg">
 Figure 2: Bayes’ Theorem
 <br>
 
@@ -122,8 +122,8 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDM1NjkwMSwtMTQxNjUxMjc2MCwtNz
-E5MjI5NjY5LC02MDQ1NjExNDIsMTc3MzA1NTcwNCwtMjE5OTQy
-MDIxLC01MTQzOTY2MzUsLTg1MDQxMDczNiwxNjIwODczMjI2LC
-00NTQzMTM2NDNdfQ==
+eyJoaXN0b3J5IjpbMTQ0MDM2ODk3MCwtMTYwMzU2OTAxLC0xND
+E2NTEyNzYwLC03MTkyMjk2NjksLTYwNDU2MTE0MiwxNzczMDU1
+NzA0LC0yMTk5NDIwMjEsLTUxNDM5NjYzNSwtODUwNDEwNzM2LD
+E2MjA4NzMyMjYsLTQ1NDMxMzY0M119
 -->
