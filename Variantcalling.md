@@ -11,6 +11,7 @@ The genomes of individuals and overall populations are all incredibly similar; h
 </p>
 
 *Figure 1a: SNP Example*
+
 *Figure 1b: Indel Example*
 
   
