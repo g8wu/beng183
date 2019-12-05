@@ -19,8 +19,6 @@ The specific ways variant DNA sequences appear can be categorized into three gro
 Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers may choose depending on the actual data and sample type.
 #### Bayes' Method
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities ( **P(G)** ), create error models for data observations ( P(D|G) ), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
-
-![](https://lh3.googleusercontent.com/QHvwDhbFs47V-HfDZGuk91MfAfKusgexNQ_HP4MQHkrJgZcjkd2MowWURpBWBmd5fGqsT1BRxssBPCJ4jZqXeGDTxTrvrR2eHLUZp9NdJMHy7bbFQS4IR3NYUWPiSFYZi2NIyNHz)
 <img src="https://github.com/g8wu/beng183/pictures/bayes.svg">
 Figure 2: Bayes’ Theorem
 <br>
@@ -122,8 +120,8 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDM2ODk3MCwtMTYwMzU2OTAxLC0xND
-E2NTEyNzYwLC03MTkyMjk2NjksLTYwNDU2MTE0MiwxNzczMDU1
-NzA0LC0yMTk5NDIwMjEsLTUxNDM5NjYzNSwtODUwNDEwNzM2LD
-E2MjA4NzMyMjYsLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbLTExMzc2Mzg0MDUsLTE2MDM1NjkwMSwtMT
+QxNjUxMjc2MCwtNzE5MjI5NjY5LC02MDQ1NjExNDIsMTc3MzA1
+NTcwNCwtMjE5OTQyMDIxLC01MTQzOTY2MzUsLTg1MDQxMDczNi
+wxNjIwODczMjI2LC00NTQzMTM2NDNdfQ==
 -->
