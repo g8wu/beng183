@@ -44,10 +44,23 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 
 ## Demo
 We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final VCF file visualizations. The tools used:
-*  **FastQC**: quality check of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+*  **FastQC**: quality check and trimming of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **samtools**: file conversion sam to bam[<sup>[3]</sup>](http://samtools.sourceforge.net)
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
+
+Demo files:----------------
+
+
+### FastQC before and after trimming
+<p float="left">
+  <img src='/pictures/fastqc1.png' width='350'/>
+  <img src='/pictures/fastqc1-trim.png'  width='350'/>
+  <img src='/pictures/fastqc2.png' width='350'/>
+  <img src='/pictures/fastqc2-trim.png'  width='350'/>
+</p>
+<br>
+
 ```
 # Setup utput file and reference genome file:
 file=log.txt
