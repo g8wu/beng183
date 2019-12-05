@@ -41,7 +41,7 @@ Because this is a comparative analysis, the algorithms can differ depending on s
 More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
 
 ## Demo
-We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are:
+We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final BAM files that show variant sequences and locations. Tools used are:
 *  **FastQC**: quality check of reads
 * **bwa mem** (Burrows-Wheeler Alignment): alignment
 * **samtools**: alignment
@@ -100,6 +100,7 @@ do
 done
 ```
 
+## Alternative Methods
 ### Galaxy Tool Variant Calling Pipeline
 Another demo using the Galaxy tool for variant calling in different settings (diploid/haploid, somatic/germline).
 
@@ -121,6 +122,6 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNjc2ODQxOCwtODUwNDEwNzM2LDE2Mj
-A4NzMyMjYsLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbODQwMjQ3MDY0LC04NTA0MTA3MzYsMTYyMD
+g3MzIyNiwtNDU0MzEzNjQzXX0=
 -->
