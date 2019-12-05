@@ -106,6 +106,9 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 ## References:
 [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) in intro
+Demo References:
+[Burrows-Wheeler Alignment](https://github.com/lh3/bwa)
+Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
 
 Wikipedia for variant calling: [https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
 Basic pipeline: [https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
@@ -219,6 +222,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNDUyMzU1NiwtODUwNDEwNzM2LDE2Mj
-A4NzMyMjYsLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbLTM1OTAwNjA4LC04NTA0MTA3MzYsMTYyMD
+g3MzIyNiwtNDU0MzEzNjQzXX0=
 -->
