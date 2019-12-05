@@ -115,6 +115,9 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 [3] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
 * Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
 
+[4] [VarScan 2](http://varscan.sourceforge.net):
+* Koboldt, D., Zhang, Q., Larson, D., Shen, D., McLellan, M., Lin, L., Miller, C., Mardis, E., Ding, L., & Wilson, R. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research  DOI:  [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
+
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 [x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
 
@@ -123,6 +126,6 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNDM5NjYzNSwtODUwNDEwNzM2LDE2Mj
-A4NzMyMjYsLTQ1NDMxMzY0M119
+eyJoaXN0b3J5IjpbLTk4NzYyNjY2OCwtNTE0Mzk2NjM1LC04NT
+A0MTA3MzYsMTYyMDg3MzIyNiwtNDU0MzEzNjQzXX0=
 -->
