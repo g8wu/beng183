@@ -44,7 +44,7 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 We demonstrate an analysis pipeline starting from analysis ready reads to final BAM files showing variant sequences and locations. Tools used are FastQC for quality check, samtools for alignment, VCF for variant calling, bftools, SnpEff for variant annotation, and IGV for visualization of read coverage and variant type.
 
 Setup utput file and reference genome file:
->file=log.txt
+	file=log.txt
 end=.fastq.gz
 ref=tuberculosis.fasta
 >bwa index $ref
@@ -216,6 +216,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1Njc3MjQyLDE2MjA4NzMyMjYsLTQ1ND
-MxMzY0M119
+eyJoaXN0b3J5IjpbLTk3NDIwMjM3MCwxNjIwODczMjI2LC00NT
+QzMTM2NDNdfQ==
 -->
