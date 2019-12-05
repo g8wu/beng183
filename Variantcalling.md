@@ -44,7 +44,7 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final VCF file visualizations. The tools used:
 *  **FastQC**: quality check of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 * **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
-* **samtools**: file conversion[<sup>[3]</sup>](http://samtools.sourceforge.net)
+* **samtools**: file conversion sam to bam[<sup>[3]</sup>](http://samtools.sourceforge.net)
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
 ```
 # Setup utput file and reference genome file:
@@ -123,7 +123,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NzU3NDk4NCwtMjE5OTQyMDIxLC01MT
+eyJoaXN0b3J5IjpbMTc3MzA1NTcwNCwtMjE5OTQyMDIxLC01MT
 QzOTY2MzUsLTg1MDQxMDczNiwxNjIwODczMjI2LC00NTQzMTM2
 NDNdfQ==
 -->
