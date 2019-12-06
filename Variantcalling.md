@@ -50,7 +50,7 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
 
 Demo files:----------------
-
+[Full pipeline script](https://github.com/g8wu/)
 
 ### FastQC before and after trimming
 <p float="left">
