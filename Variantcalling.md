@@ -51,7 +51,7 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 
 Demo files:----------------
 
-[Full pipeline script](https://github.com/g8wu/beng183/run_variance.txt)
+[Full pipeline script](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
 ### FastQC before and after trimming
 <p float="left">
