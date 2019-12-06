@@ -1,0 +1,50 @@
+file=log.txt
+end=.fastq.gz
+ref=tuberculosis.fasta
+
+echo "Indexing the reference genome" | tee -a $file
+
+bwa index $ref
+
+echo "Executing main commands" | tee -a $file
+for prefix in ERR2432987 ERR2432988 ERR2432989 ERR2433004 ERR2433005 ERR2433006
+do
+  echo "Running fastqc on ${prefix}" | tee -a $file
+  fastqc -o . ${prefix}_1${end} ${prefix}_2${end} | tee -a $file
+
+  echo "Running sickle with q.c. of 30" | tee -a $file
+  sickle pe -q 30 -f ${prefix}_1${end} -r ${prefix}_2${end} -t sanger \
+  -o ${prefix}_t1.fastq -p ${prefix}_t2.fastq -s singletons.fastq \
+  | tee -a $file
+
+  echo "Running fastqc on trimmed ${prefix} files" | tee -a $file
+  fastqc -o . ${prefix}_t1.fastq ${prefix}_t2.fastq | tee -a $file
+  
+  echo "Aligning tuberculosis sequences onto the reference genome" | tee -a $file
+  bwa mem $ref ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam | tee -a $file
+
+  echo "Checking the quality of sam file" | tee -a $file
+  samtools flagstat ${prefix}.sam
+
+  echo "Converting sam file to bam file" | tee -a $file
+  samtools view -S -b ${prefix}.sam > ${prefix}.bam | tee -a $file
+
+  echo "Sorting bam file" | tee -a $file
+  samtools sort ${prefix}.bam > ${prefix}_s.bam | tee -a $file
+
+  echo "Indexing the bam file" | tee -a $file
+  samtools index ${prefix}_s.bam | tee -a $file
+
+  echo "Making a pileup" | tee -a $file
+  samtools mpileup -f $ref ${prefix}_s.bam > ${prefix}.mpileup | tee -a $file
+
+  echo "Running VarScan" | tee -a $file
+  java -jar VarScan.jar mpileup2snp ${prefix}.mpileup --min-var-freq 0.90 \
+  --variants --output-vcf 1 > ${prefix}_raw.vcf | tee -a $file
+
+  echo "Running awk to format the vcf file" | tee -a $file
+  awk '{if (NR>24) $1="Chromosome"; print}' ${prefix}_raw.vcf> ${prefix}.vcf | tee -a $file
+
+  echo "Cleaning temporary files" | tee -a $file
+  rm *.sam *.bam *.mpileup *raw.vcf
+done
