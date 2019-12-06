@@ -64,42 +64,56 @@ Demo files:----------------
 
 (prefixes: ERR2432987 ERR2432988 ERR2432989 ERR2433004 ERR2433005 ERR2433006)
 Setup output file and reference genome file:
-```file=log.txt
+```
+file=log.txt
 end=.fastq.gz
 ref=tuberculosis.fasta
-bwa index $ref```
+bwa index $ref
+```
 
 Run Fastqc to quality check reads
-```fastqc -o . \${prefix}_1${end} \${prefix}_2${end}```
+```
+fastqc -o . \${prefix}_1${end} \${prefix}_2${end}
+```
 
 Using Sickle, trim ends with QC score threshold 30
-```sickle pe -q 30 -f \${prefix}_1${end} -r \${prefix}_2${end} -t sanger \
--o ${prefix}_t1.fastq -p ${prefix}_t2.fastq -s singletons.fastq \```
+```
+sickle pe -q 30 -f \${prefix}_1${end} -r \${prefix}_2${end} -t sanger \
+-o ${prefix}_t1.fastq -p ${prefix}_t2.fastq -s singletons.fastq \
+```
 
 Quality check reads with trimmed ends
-```fastqc -o . ${prefix}_t1.fastq ${prefix}_t2.fastq
+```
+fastqc -o . ${prefix}_t1.fastq ${prefix}_t2.fastq
 ```
 	  
 Using bwa align tuberculosis sequences to the reference genome
-```bwa mem $ref ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam
+```
+bwa mem $ref ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam
 ```
 
 Using samtools, quality check alignment sequences and convert sam to bam file format
-```samtools flagstat ${prefix}.sam
-samtools view -S -b ${prefix}.sam > ${prefix}.bam```
+```
+samtools flagstat ${prefix}.sam
+samtools view -S -b ${prefix}.sam > ${prefix}.bam
+```
 
 Sort bam files, make pileup files
-```samtools sort ${prefix}.bam > ${prefix}_s.bam
+```
+samtools sort ${prefix}.bam > ${prefix}_s.bam
 samtools index ${prefix}_s.bam
 samtools mpileup -f $ref ${prefix}_s.bam > ${prefix}.mpileup
 ```
 
 Use VarScan for variant calling
-```java -jar VarScan.jar mpileup2snp ${prefix}.mpileup --min-var-freq 0.90 \
---variants --output-vcf 1 > ${prefix}_raw.vcf```
+```
+java -jar VarScan.jar mpileup2snp ${prefix}.mpileup --min-var-freq 0.90 \
+--variants --output-vcf 1 > ${prefix}_raw.vcf
+```
 
 Format vcf file and delete temporary files
-```awk '{if (NR>24) $1="Chromosome"; print}' ${prefix}_raw.vcf> ${prefix}.vcf
+```
+awk '{if (NR>24) $1="Chromosome"; print}' ${prefix}_raw.vcf> ${prefix}.vcf
 rm *.sam *.bam *.mpileup *raw.vcf
 ```
 
