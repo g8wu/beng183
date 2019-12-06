@@ -6,8 +6,8 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instruct our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
 
 <p float="left">
-  <img src='/pictures/snp.png' width='200'/>
-  <img src='/pictures/indel.png'  width='400'/>
+  <img src='/pictures/snp.png' width='300'/>
+  <img src='/pictures/indel.png'  width='500'/>
 </p>
 
 *Figure 1a: SNP Example*
@@ -55,10 +55,10 @@ Demo files:----------------
 
 ### FastQC before and after trimming
 <p float="left">
-  <img src='/pictures/fastqc1.png' width='350'/>
-  <img src='/pictures/fastqc1-trim.png'  width='350'/>
-  <img src='/pictures/fastqc2.png' width='350'/>
-  <img src='/pictures/fastqc2-trim.png'  width='350'/>
+  <img src='/pictures/fastqc1.png' width='400'/>
+  <img src='/pictures/fastqc1-trim.png'  width='400'/>
+  <img src='/pictures/fastqc2.png' width='400'/>
+  <img src='/pictures/fastqc2-trim.png'  width='400'/>
 </p>
 <br>
 
@@ -135,6 +135,7 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 * Koboldt, D., Zhang, Q., Larson, D., Shen, D., McLellan, M., Lin, L., Miller, C., Mardis, E., Ding, L., & Wilson, R. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research  DOI:  [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
 
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
+
 [x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
 
 
