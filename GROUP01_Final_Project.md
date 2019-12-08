@@ -22,7 +22,7 @@ The specific ways DNA variants appear can be categorized into three groups: SNPs
 
 ## Strategies
 
-Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers' choice depends on the actual data and sample type.
+Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning.[<sup>[2]</sup>](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data) Each of these approaches has its own advantages and disadvantages, and researchers' choice depends on the actual data and sample type.[<sup>[3]</sup>](https://doi.org/10.1186/gm432)
 
 #### Bayes' Method
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities (**P(G)**), create error models for data observations (**P(D|G)**), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
@@ -33,7 +33,7 @@ The probabilistic approach takes a Bayesian perspective on the data. Researchers
 <br>
 
 #### Heuristic Method
-Heuristic based algorithms serve as an alternative method. Instead of calculating genotype possibilities, researchers would use a list of heuristic factors to set the bounds for variant calling. Those factors might include minimum allele counts, read quality cut-offs, and depth levels of read coverage. Though a relatively unpopular approach, the method could robustly outly data that violate the assumptions of probabilistic models.
+Heuristic based algorithms serve as an alternative method. Instead of calculating genotype possibilities, researchers would use a list of heuristic factors to set the bounds for variant calling. Those factors might include minimum allele counts, read quality cut-offs, and depth levels of read coverage. Though a relatively unpopular approach, the method could robustly outlay data that violate the assumptions of probabilistic models.
 
 #### Machine Learning Method
 Machine learning represents researchers’ recent attempts to optimize the current variant calling methods. Relying on convolutional neural network (CNN), the method is able to magically output genotype likelihoods. Researchers currently have few practical ways to understand the nature of these neural networks, but try their best to make sure that the accuracy of input data meet their expectations.
@@ -48,10 +48,10 @@ More discussion on applications of variant calling. Examples include [Feliciano,
 
 ## Demo
 We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final VCF file visualizations. The tools used:
-*  **FastQC**: quality check and trimming of reads[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
-* **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[3]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
-* **samtools**: file conversion sam to bam[<sup>[3]</sup>](http://samtools.sourceforge.net)
-* **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
+*  **FastQC**: quality check and trimming of reads[<sup>[4]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+* **bwa mem**: Burrows-Wheeler Alignment alignment[<sup>[4]</sup>](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+* **samtools**: file conversion sam to bam[<sup>[5]</sup>](http://samtools.sourceforge.net)
+* **VarScan**: variant calling[<sup>[6]</sup>](http://dkoboldt.github.io/varscan/)
 
 ### Demo Files
 Sequenced read files:----------------
@@ -135,20 +135,25 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 [2] [Wikipedia for variant calling](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
 
-[3] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
-* Li H. and Durbin R. (2009). Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+[3] Pipeline Concordance
+* O'Rawe, Jason et al. (2013). Low concordance of multiple variant-calling pipelines: practical implications for exome and genome sequencing. Genome Medicine, 5:28. DOI: [10.1186/gm432](https://doi.org/10.1186/gm432)
 
-[4] [VarScan 2](http://dkoboldt.github.io/varscan/):
+[4] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
+* Li H. and Durbin R. (2009). Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. PMID: [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
+
+[5] [Samtools](http://samtools.sourceforge.net)
+* Li H., Handsaker B., Wysoker A., Fennell T., Ruan J., Homer N., Marth G., Abecasis G., Durbin R. and 1000 Genome Project Data Processing Subgroup (2009). The Sequence alignment/map (SAM) format and SAMtools. Bioinformatics, 25:2078-9. [PMID: 19505943](http://www.ncbi.nlm.nih.gov/pubmed/19505943)
+
+* Li H. et al. (2011). Statistical Framework for SNP Calling, Mutation Discovery, Association Mapping and Population Genetical Parameter Estimation from Sequencing Data. Bioinformatics, 27-21:2987-93. [PMID: 21903627](http://www.ncbi.nlm.nih.gov/pubmed/21903627)
+
+[6] [VarScan](http://dkoboldt.github.io/varscan/):
 * Koboldt, D. et al. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research. DOI: [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
 
-[5] Whole Genome Sequencing Accuracy
+[7] Whole Genome Sequencing Accuracy
 * Feliciano, Cinara S. et al. (2018). Accuracy of whole genome sequencing versus phenotypic (MGIT) and commercial molecular tests for detection of drug-resistant Mycobacterium tuberculosis isolated from patients in Brazil and Mozambique. Tuberculosis, 110:59-67. DOI: [10.1016/j.tube.2018.04.003](https://doi.org/10.1016/j.tube.2018.04.003)
 
-[6] High-Coverage Samples
+[8] High-Coverage Samples
 * Li, Heng (2014). Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics, 30-20:2843-2451. DOI: [10.1093/bioinformatics/btu356](https://doi.org/10.1093/bioinformatics/btu356)
-
-[7] Pipeline Concordance
-* O'Rawe, Jason et al. (2013). Low concordance of multiple variant-calling pipelines: practical implications for exome and genome sequencing. Genome Medicine, 5:28. DOI: [10.1186/gm432](https://doi.org/10.1186/gm432)
 
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 
