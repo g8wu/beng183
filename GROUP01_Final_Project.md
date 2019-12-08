@@ -5,13 +5,15 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 
 ## Introduction
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instruct our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
-
 <p float="left">
   <img src='/pictures/snp.png' width='250'/>
-  <img src='/pictures/indel.png'  width='400'/>
 </p>
 
 *Figure 1a: SNP Example*
+
+<p float="left">
+  <img src='/pictures/indel.png'  width='400'/>
+</p>
 
 *Figure 1b: Indel Example*
 
@@ -21,6 +23,7 @@ The specific ways DNA variants appear can be categorized into three groups: SNPs
 ## Strategies
 
 Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers' choice depends on the actual data and sample type.
+
 #### Bayes' Method
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities (**P(G)**), create error models for data observations (**P(D|G)**), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
 
@@ -56,7 +59,7 @@ Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.n
 [Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
 
-Run Fastqc to quality check reads. `-o .` outputs files to current directory. Multiple files can be checked using one command line. 
+Run Fastqc to quality check reads. `-o .` outputs files to current directory. Multiple files can be checked using one command line.
 ```
 fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
 ```
@@ -67,14 +70,14 @@ fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
   <img src='/pictures/fastqc1-trim.png'  width='400' />
 </p>
 
-*Row 1: Per base sequence quality of read file 1 before and after trimming*
+*Figure 3a: Per base sequence quality of read file 1 before and after trimming*
 
 <p float="left">
   <img src='/pictures/fastqc2.png' width='400'/>
   <img src='/pictures/fastqc2-trim.png'  width='400'/>
 </p>
 
-*Row 2: Per base sequence quality of read file 2 before and after trimming*
+*Figure 3b: Per base sequence quality of read file 2 before and after trimming*
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
@@ -88,7 +91,7 @@ Quality check reads with trimmed ends
 ```
 fastqc -o . \trimmed_file_1.fastq \trimmed_file_2.fastq
 ```
-	  
+
 Using bwa align tuberculosis sequences to the reference genome and output to sam file. (For more about sam and bam file formats)
 ```
 bwa mem tuberculosis.fasta \trimmed_file_1.fastq \trimmed_file_2.fastq > ${prefix}.sam
@@ -124,7 +127,7 @@ rm *.sam *.bam *.mpileup *raw.vcf
 Another demo using the Galaxy tool for variant calling in different settings (diploid/haploid, somatic/germline).
 
 
-  
+
 
 ## References:
 [1] [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies)
@@ -137,8 +140,14 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 [4] [VarScan 2](http://dkoboldt.github.io/varscan/):
 * Koboldt, D. et al. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research. DOI: [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
 
-[5] [Whole Genome Sequencing Accuracy]
+[5] Whole Genome Sequencing Accuracy
 * Feliciano, Cinara S. et al. (2018). Accuracy of whole genome sequencing versus phenotypic (MGIT) and commercial molecular tests for detection of drug-resistant Mycobacterium tuberculosis isolated from patients in Brazil and Mozambique. Tuberculosis, 110:59-67. DOI: [10.1016/j.tube.2018.04.003](https://doi.org/10.1016/j.tube.2018.04.003)
+
+[6] High-Coverage Samples
+* Li, Heng (2014). Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics, 30-20:2843-2451. DOI: [10.1093/bioinformatics/btu356](https://doi.org/10.1093/bioinformatics/btu356)
+
+[7] Pipeline Concordance
+* O'Rawe, Jason et al. (2013). Low concordance of multiple variant-calling pipelines: practical implications for exome and genome sequencing. Genome Medicine, 5:28. DOI: [10.1186/gm432](https://doi.org/10.1186/gm432)
 
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 
