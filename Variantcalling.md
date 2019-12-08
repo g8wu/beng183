@@ -1,5 +1,6 @@
 # Variant Calling
 BENG 183 Group 1
+
 Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 
 ## Introduction
@@ -34,7 +35,7 @@ Heuristic based algorithms serve as an alternative method. Instead of calculatin
 #### Machine Learning Method
 Machine learning represents researchers’ recent attempts to optimize the current variant calling methods. Relying on convolutional neural network (CNN), the method is able to magically output genotype likelihoods. Researchers currently have few practical ways to understand the nature of these neural networks, but try their best to make sure that the accuracy of input data meet their expectations.
 
-## Procedure (to be filled)
+## Procedure
 After the whole genome or exome is sequenced, the raw reads in FASTQ files are quality checked and aligned to the reference genome, resulting in BAM or CRAM files. The alignment shows how the sequences are different from the reference genome, and these variants can be further analyzed to confirm their significance.
 
 Because this is a comparative analysis, the algorithms can differ depending on sample type. There are many packages and pipelines that have been developed to accommodate for diploidy, somatic cells, and germline cells.
@@ -53,14 +54,6 @@ Demo files:----------------
 
 [Full pipeline script](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
-### FastQC before and after trimming
-<p float="left">
-  <img src='/pictures/fastqc1.png' width='400'/>
-  <img src='/pictures/fastqc1-trim.png'  width='400'/>
-  <img src='/pictures/fastqc2.png' width='400'/>
-  <img src='/pictures/fastqc2-trim.png'  width='400'/>
-</p>
-<br>
 
 (prefixes: ERR2432987 ERR2432988 ERR2432989 ERR2433004 ERR2433005 ERR2433006)
 Setup output file and reference genome file:
@@ -75,6 +68,15 @@ Run Fastqc to quality check reads
 ```
 fastqc -o . \${prefix}_1${end} \${prefix}_2${end}
 ```
+
+### FastQC: Per Base Sequence Quality before and after trimming
+<p float="left">
+  <img src='/pictures/fastqc1.png' width='400'/>
+  <img src='/pictures/fastqc1-trim.png'  width='400'/>
+  <img src='/pictures/fastqc2.png' width='400'/>
+  <img src='/pictures/fastqc2-trim.png'  width='400'/>
+</p>
+<br>
 
 Using Sickle, trim ends with QC score threshold 30
 ```
@@ -137,14 +139,3 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 
 [x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
-
-
-
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODIxOTYzMSwxNzA2MTg1NjkyLC0xNj
-AzNTY5MDEsLTE0MTY1MTI3NjAsLTcxOTIyOTY2OSwtNjA0NTYx
-MTQyLDE3NzMwNTU3MDQsLTIxOTk0MjAyMSwtNTE0Mzk2NjM1LC
-04NTA0MTA3MzYsMTYyMDg3MzIyNiwtNDU0MzEzNjQzXX0=
--->
