@@ -15,12 +15,12 @@ The genomes of individuals and overall populations are all incredibly similar; h
 
 *Figure 1b: Indel Example*
 
-  
-The specific ways variant DNA sequences appear can be categorized into three groups: SNPs, indels, and structural variations. Single nucleotide polymorphisms (SNPs) represent differences of a single nucleotide. Indels are insertions and deletions of segments of DNA and not as common as SNPs. Structural variations are much larger and typically characterized as more than 1 kb in length. These segments can be inverted, translocated, or copied redundantly within the genome. Variant calling is the process by which these variations are identified from sequence data.
+
+The specific ways DNA variants appear can be categorized into three groups: SNPs, indels, and structural variations. Single nucleotide polymorphisms (SNPs) represent differences of a single nucleotide. Indels are insertions and deletions of DNA segments and not as common as SNPs. Structural variations are much larger and typically characterized as more than 1 kb in length. These segments can be inverted, translocated, or copied redundantly within the genome. Variant calling is the process by which these variations are identified from sequence data.
 
 ## Strategies
 
-Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers may choose depending on the actual data and sample type.
+Different variant calling methods rely on several kinds of general strategies, including probabilistic strategy, heuristic strategy, and machine learning. Each of these approaches has its own advantages and disadvantages, and researchers' choice depends on the actual data and sample type.
 #### Bayes' Method
 The probabilistic approach takes a Bayesian perspective on the data. Researchers use the data to generate prior estimates for genotype probabilities (**P(G)**), create error models for data observations (**P(D|G)**), and combine these steps to calculate the probabilities of variants at certain loci. During these calculations, researchers have to consider the effects of linkage disequilibrium, which makes genotypes at adjacent loci not independent.
 
@@ -128,13 +128,17 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 ## References:
 [1] [Fun statistic](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies)
+
 [2] [Wikipedia for variant calling](https://en.wikipedia.org/wiki/SNV_calling_from_NGS_data)
 
 [3] [Burrows-Wheeler Alignment](https://github.com/lh3/bwa) (bwa):
-* Li H. and Durbin R. (2009) Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID:  [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)]
+* Li H. and Durbin R. (2009). Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics, 25:1754-60. [PMID: [19451168](http://www.ncbi.nlm.nih.gov/pubmed/19451168)
 
 [4] [VarScan 2](http://dkoboldt.github.io/varscan/):
-* Koboldt, D., Zhang, Q., Larson, D., Shen, D., McLellan, M., Lin, L., Miller, C., Mardis, E., Ding, L., & Wilson, R. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research  DOI:  [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
+* Koboldt, D. et al. (2012). VarScan 2: Somatic mutation and copy number alteration discovery in cancer by exome sequencing  Genome Research. DOI: [10.1101/gr.129684.111](http://dx.doi.org/10.1101/gr.129684.111)  
+
+[5] [Whole Genome Sequencing Accuracy]
+* Feliciano, Cinara S. et al. (2018). Accuracy of whole genome sequencing versus phenotypic (MGIT) and commercial molecular tests for detection of drug-resistant Mycobacterium tuberculosis isolated from patients in Brazil and Mozambique. Tuberculosis, 110:59-67. DOI: [10.1016/j.tube.2018.04.003](https://doi.org/10.1016/j.tube.2018.04.003)
 
 [x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 
