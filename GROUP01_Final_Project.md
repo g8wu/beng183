@@ -90,13 +90,9 @@ Using FastQC again, quality check reads with trimmed ends
 ```
 fastqc -o . \trimmed_read_1.fastq \trimmed_read_2.fastq
 ```
-<<<<<<< HEAD
 
-Using bwa align tuberculosis sequences to the reference genome and output to sam file. (For more about sam and bam file formats)
-=======
-	  
 Using bwa, align tuberculosis sequences to the reference genome and output as a sam file.
->>>>>>> 9a8131d5dc208cd3fed43282cb6393972d869e7b
+
 ```
 bwa mem tuberculosis.fasta \trimmed_read_1.fastq \trimmed_read_2.fastq > output_align.sam
 ```
