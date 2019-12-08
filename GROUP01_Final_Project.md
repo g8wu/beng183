@@ -51,7 +51,7 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
 
 ### Demo Files
-Raw reads files:----------------
+Sequenced read files:----------------
 Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3?report=fasta)
 [Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
@@ -68,6 +68,9 @@ fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
   <img src='/pictures/fastqc2.png' width='400'/>
   <img src='/pictures/fastqc2-trim.png'  width='400'/>
 </p>
+*Row 1: Per base sequence quality of read file 1 before and after trimming*
+
+*Row 1: Per base sequence quality of read file 2 before and after trimming*
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
