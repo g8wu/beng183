@@ -53,12 +53,11 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 ### Demo Files
 Sequenced read files:----------------
 Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3?report=fasta)
-[Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
-
+[Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt): implements loop for running multiple read files and sorting them for variant calling. See output file 'log.txt' for runtime status notes.
 
 Run Fastqc to quality check reads. `-o .` outputs files to current directory. Multiple files can be checked using one command line. 
 ```
-fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
+fastqc -o . \path\to\read_1.fastq.gz \path\to\read_2.fastq.gz
 ```
 
 ### FastQC: Per Base Sequence Quality before and after trimming
@@ -80,44 +79,45 @@ fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
 Using Sickle, trim ends with QC score threshold 30
 (INSERT FLAG DETAILS)
 ```
-sickle pe -q 30 -f \path\to\read\file_1.fastq.gz -r \path\to\read\file_1.fastq.gz -t sanger \
--o \trimmed\file_1.fastq -p \trimmed\file_2.fastq -s singletons.fastq \
+sickle pe -q 30 -f \path\to\read_1.fastq.gz -r \path\to\read_2.fastq.gz -t sanger \
+-o \trimmed\read_1.fastq -p \trimmed\read_2.fastq -s singletons.fastq \
 ```
 
-Quality check reads with trimmed ends
+Using FastQC again, quality check reads with trimmed ends
 ```
-fastqc -o . \trimmed_file_1.fastq \trimmed_file_2.fastq
+fastqc -o . \trimmed_read_1.fastq \trimmed_read_2.fastq
 ```
 	  
-Using bwa align tuberculosis sequences to the reference genome and output to sam file. (For more about sam and bam file formats)
+Using bwa, align tuberculosis sequences to the reference genome and output as a sam file.
 ```
-bwa mem tuberculosis.fasta \trimmed_file_1.fastq \trimmed_file_2.fastq > ${prefix}.sam
-```
-
-Using samtools, quality check alignment sequences and convert sam to bam file format
-```
-samtools flagstat ${prefix}.sam
-samtools view -S -b ${prefix}.sam > ${prefix}.bam
+bwa mem tuberculosis.fasta \trimmed_read_1.fastq \trimmed_read_2.fastq > output_align.sam
 ```
 
-Sort bam files, make pileup files
+Using samtools, quality check the alignment sequence and convert it from sam to bam file format
 ```
-samtools sort ${prefix}.bam > ${prefix}_s.bam
-samtools index ${prefix}_s.bam
-samtools mpileup -f $ref ${prefix}_s.bam > ${prefix}.mpileup
+samtools flagstat output.sam
+samtools view -S -b output_align.sam > output_align.bam
+```
+
+Sort bam file and make pileup file (INSERT DETAILS ABOUT PILEUPS/OTHER FLAGS)
+```
+samtools sort output_align.bam > sorted_align.bam
+samtools mpileup -f tuberculosis.fasta sorted_align.bam > output.mpileup
 ```
 
 Use VarScan for variant calling
 ```
-java -jar VarScan.jar mpileup2snp ${prefix}.mpileup --min-var-freq 0.90 \
---variants --output-vcf 1 > ${prefix}_raw.vcf
+java -jar VarScan.jar mpileup2snp output.mpileup --min-var-freq 0.90 \
+--variants --output-vcf 1 > output_raw.vcf
 ```
 
-Format vcf file and delete temporary files
+Format vcf file using 'awk' and delete temporary files
 ```
-awk '{if (NR>24) $1="Chromosome"; print}' ${prefix}_raw.vcf> ${prefix}.vcf
+awk '{if (NR>24) $1="Chromosome"; print}' output_raw.vcf> formatted_output.vcf
 rm *.sam *.bam *.mpileup *raw.vcf
 ```
+
+Variant calling complete! You can view the final vcf file with variant locations and sequnces using any plain text reader or spreadsheet software (i.e. import to Microsoft Excel and select "Tab" when it prompts you what delimiter is used).
 
 ## Alternative Methods
 ### Galaxy Tool Variant Calling Pipeline
