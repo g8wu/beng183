@@ -40,7 +40,7 @@ After the whole genome or exome is sequenced, the raw reads in FASTQ files are q
 
 Because this is a comparative analysis, the algorithms can differ depending on sample type. There are many packages and pipelines that have been developed to accommodate for diploidy, somatic cells, and germline cells.
 
-## Significance (to be filled)
+## Significance
 More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
 
 ## Demo
@@ -50,23 +50,15 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 * **samtools**: file conversion sam to bam[<sup>[3]</sup>](http://samtools.sourceforge.net)
 * **VarScan**: variant calling[<sup>[3]</sup>](http://dkoboldt.github.io/varscan/)
 
-Demo files:----------------
+### Demo Files
+Raw reads files:----------------
+Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3?report=fasta)
+[Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
-[Full pipeline script](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
-
-(prefixes: ERR2432987 ERR2432988 ERR2432989 ERR2433004 ERR2433005 ERR2433006)
-Setup output file and reference genome file:
+Run Fastqc to quality check reads. `<-o .>` outputs files to current directory. Multiple files can be checked using one command line. 
 ```
-file=log.txt
-end=.fastq.gz
-ref=tuberculosis.fasta
-bwa index $ref
-```
-
-Run Fastqc to quality check reads
-```
-fastqc -o . \${prefix}_1${end} \${prefix}_2${end}
+fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
 ```
 
 ### FastQC: Per Base Sequence Quality before and after trimming
@@ -79,19 +71,20 @@ fastqc -o . \${prefix}_1${end} \${prefix}_2${end}
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
+(INSERT FLAG DETAILS)
 ```
-sickle pe -q 30 -f \${prefix}_1${end} -r \${prefix}_2${end} -t sanger \
--o ${prefix}_t1.fastq -p ${prefix}_t2.fastq -s singletons.fastq \
+sickle pe -q 30 -f \path\to\read\file_1.fastq.gz -r \path\to\read\file_1.fastq.gz -t sanger \
+-o \trimmed\file_1.fastq -p \trimmed\file_2.fastq -s singletons.fastq \
 ```
 
 Quality check reads with trimmed ends
 ```
-fastqc -o . ${prefix}_t1.fastq ${prefix}_t2.fastq
+fastqc -o . \trimmed\file_1.fastq \trimmed\file_2.fastq
 ```
 	  
 Using bwa align tuberculosis sequences to the reference genome
 ```
-bwa mem $ref ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam
+bwa mem tuberculosis.fasta ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam
 ```
 
 Using samtools, quality check alignment sequences and convert sam to bam file format
