@@ -56,7 +56,7 @@ Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.n
 [Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt)
 
 
-Run Fastqc to quality check reads. `<-o .>` outputs files to current directory. Multiple files can be checked using one command line. 
+Run Fastqc to quality check reads. `-o .` outputs files to current directory. Multiple files can be checked using one command line. 
 ```
 fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
 ```
@@ -64,13 +64,17 @@ fastqc -o . \path\to\read\file_1.fastq.gz \path\to\read\file_2.fastq.gz
 ### FastQC: Per Base Sequence Quality before and after trimming
 <p float="left">
   <img src='/pictures/fastqc1.png' width='400'/>
-  <img src='/pictures/fastqc1-trim.png'  width='400'/>
+  <img src='/pictures/fastqc1-trim.png'  width='400' />
+</p>
+
+*Row 1: Per base sequence quality of read file 1 before and after trimming*
+
+<p float="left">
   <img src='/pictures/fastqc2.png' width='400'/>
   <img src='/pictures/fastqc2-trim.png'  width='400'/>
 </p>
-*Row 1: Per base sequence quality of read file 1 before and after trimming*
 
-*Row 1: Per base sequence quality of read file 2 before and after trimming*
+*Row 2: Per base sequence quality of read file 2 before and after trimming*
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
@@ -82,12 +86,12 @@ sickle pe -q 30 -f \path\to\read\file_1.fastq.gz -r \path\to\read\file_1.fastq.g
 
 Quality check reads with trimmed ends
 ```
-fastqc -o . \trimmed\file_1.fastq \trimmed\file_2.fastq
+fastqc -o . \trimmed_file_1.fastq \trimmed_file_2.fastq
 ```
 	  
-Using bwa align tuberculosis sequences to the reference genome
+Using bwa align tuberculosis sequences to the reference genome and output to sam file. (For more about sam and bam file formats)
 ```
-bwa mem tuberculosis.fasta ${prefix}_t1.fastq ${prefix}_t2.fastq > ${prefix}.sam
+bwa mem tuberculosis.fasta \trimmed_file_1.fastq \trimmed_file_2.fastq > ${prefix}.sam
 ```
 
 Using samtools, quality check alignment sequences and convert sam to bam file format
