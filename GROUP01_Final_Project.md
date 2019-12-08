@@ -55,7 +55,9 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 
 ### Demo Files
 Sequenced read files:----------------
+
 Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3?report=fasta)
+
 [Full pipeline script on demo files](https://github.com/g8wu/beng183/blob/master/run_variance.txt): implements loop for running multiple read files and sorting them for variant calling. See output file 'log.txt' for runtime status notes.
 
 Run Fastqc to quality check reads. `-o .` outputs files to current directory. Multiple files can be checked using one command line.
@@ -77,6 +79,7 @@ fastqc -o . \path\to\read_1.fastq.gz \path\to\read_2.fastq.gz
 </p>
 
 *Figure 3b: Per base sequence quality of read file 2 before and after trimming*
+<br>
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
