@@ -80,7 +80,6 @@ fastqc -o . \path\to\read_1.fastq.gz \path\to\read_2.fastq.gz
 <br>
 
 Using Sickle, trim ends with QC score threshold 30
-(INSERT FLAG DETAILS)
 ```
 sickle pe -q 30 -f \path\to\read_1.fastq.gz -r \path\to\read_2.fastq.gz -t sanger \
 -o \trimmed\read_1.fastq -p \trimmed\read_2.fastq -s singletons.fastq \
@@ -103,7 +102,7 @@ samtools flagstat output.sam
 samtools view -S -b output_align.sam > output_align.bam
 ```
 
-Sort bam file and make pileup file (INSERT DETAILS ABOUT PILEUPS/OTHER FLAGS)
+Sort bam file and make pileup file
 ```
 samtools sort output_align.bam > sorted_align.bam
 samtools mpileup -f tuberculosis.fasta sorted_align.bam > output.mpileup
