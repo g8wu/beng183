@@ -166,7 +166,7 @@ Because of the specific proteins that the mutations affect, there can be conclud
 
 ## Alternative Methods
 ### Galaxy Tool Variant Calling Pipeline
-Other variations of the process can use different algorithms to identify variations. The bioinformatics webtool Galaxy includes several pipelines for variant analysis that are optimized for different sample types. The tutorials found [here](https://galaxyproject.github.io/training-material/topics/variant-analysis/) take into consideration sequence characteristics of diploid, haploid, somatic, and germline sample reads.
+Other variations of the process can use different algorithms to identify variations. The bioinformatics webtool Galaxy includes several pipelines for variant analysis that are optimized for different sample types. The tutorials found [here](https://galaxyproject.github.io/training-material/topics/variant-analysis/) take into consideration sequence characteristics of diploid, haploid, somatic, and germline sample reads.[<sup>[15]</sup>]
 
 
 ## References:
@@ -205,7 +205,7 @@ Other variations of the process can use different algorithms to identify variati
 
 [14] Minnick, Michael F. et al. “gyrA Mutations in Ciprofloxacin-Resistant Bartonella Bacilliformis Strains Obtained In Vitro.” Antimicrobial Agents and Chemotherapy 47.1 (2003): 383–386. PMC. Web. 11 June 2018.
 
+[15] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
+
 [x] High-Coverage Samples
 * Li, Heng (2014). Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics, 30-20:2843-2451. DOI: [10.1093/bioinformatics/btu356](https://doi.org/10.1093/bioinformatics/btu356)
-
-[x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
