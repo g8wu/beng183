@@ -123,6 +123,32 @@ rm *.sam *.bam *.mpileup *raw.vcf
 
 Variant calling complete! You can view the final vcf file with variant locations and sequnces using any plain text reader or spreadsheet software (i.e. import to Microsoft Excel and select "Tab" when it prompts you what delimiter is used).
 
+## Results
+Upon inspecting the vcf files, the following significant mutations can be observed:
+
+Number of mutations at locus:
+
+|     |rpoB |katG |pncA |rpsl |gyrA |embA |embB |embC |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|ERR2432987|1|1|0|0|0|0|0|1|
+|ERR2432988|2|1|1|0|0|0|0|1|
+|ERR2432989|2|1|1|1|0|0|1|1|
+|ERR2433004|0|1|0|1|4|0|0|1|
+|ERR2433005|2|1|1|0|3|1|1|1|
+|ERR2433006|0|0|0|1|4|0|0|1|
+
+Type of mutations at locus:
+(M = Missense, S = Synonymous, N = None)
+
+|     |rpoB |katG |pncA |rpsl |gyrA |embA |embB |embC |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|ERR2432987|S|M|N|N|N|N|N|M|
+|ERR2432988|MS|M|M|N|N|N|N|M|
+|ERR2432989|MS|M|M|M|N|N|M|M|
+|ERR2433004|N|M|N|M|MMMS|N|N|S|
+|ERR2433005|MS|M|M|N|MMM|S|S|S|
+|ERR2433006|N|N|N|M|MMMS|N|N|S|
+
 ## Significance
 A patient goes to hospital after showing classical food poisoning symptoms. After rapid testing, an E. Coli infection was confirmed. However, the specific type of E. Coli he contracted is antibiotic resistant. Luckily, because of the growth rate of E. Coli, specific testing can be done with different antibiotic trials to figure out which one will improve his condition at a relatively fast rate. But if the patient is unlucky and contracted a slow-growing pathogen like Mycobacterium tuberculosis, the specific testing that need to be done will take as long as eight weeks to complete. During that process, doctors must take a leap of faith and guess which antibiotic mix he needs to use to prevent the patient's condition from worsening. (Peacock)
 
