@@ -6,13 +6,13 @@ Authors: Haoyin Xu, Hongru Yu, Ginny Wu
 ## Introduction
 The genomes of individuals and overall populations are all incredibly similar; humans share 99.9% of our DNA while the remaining 0.1% of variations instruct our diversity.[<sup>[1]</sup>](https://www.genome.gov/17516714/2006-release-about-whole-genome-association-studies) These variations arise from random mutations as well as from gene recombinations in the germ line. When we compare genomes, the variations can be searched for and used to study anything from diseases to body development. For example, variations can be used to map the development of cell lineages in an embryo or the growth of a cancerous tumor.
 <p float="left">
-  <img src='/pictures/snp.png' width='250'/>
+  <img src='/pictures/snp.png' width='200'/>
 </p>
 
 *Figure 1a: SNP Example*
 
 <p float="left">
-  <img src='/pictures/indel.png'  width='400'/>
+  <img src='/pictures/indel.png'  width='350'/>
 </p>
 
 *Figure 1b: Indel Example*
@@ -152,7 +152,7 @@ Type of mutations at locus:
 ## Significance
 A patient goes to hospital after showing classical food poisoning symptoms. After rapid testing, an E. Coli infection was confirmed. However, the specific type of E. Coli he contracted is antibiotic resistant. Luckily, because of the growth rate of E. Coli, specific testing can be done with different antibiotic trials to figure out which one will improve his condition at a relatively fast rate. But if the patient is unlucky and contracted a slow-growing pathogen like Mycobacterium tuberculosis, the specific testing that need to be done will take as long as eight weeks to complete. During that process, doctors must take a leap of faith and guess which antibiotic mix he needs to use to prevent the patient's condition from worsening. [<sup>[9]</sup>](https://www.nature.com/news/health-care-bring-microbial-sequencing-to-hospitals-1.15282)
 
-However, new technologies have emerged since the old days. Now we can sequence the entire genome of Mycobacterium Tuberculosis in a matter of days. There have already been multiple mutations known to cause tuberculosis to develop resistance.Bringing pathogen sequencing to hospitals will being several benefits. First, we can improve the survival rate of patients especially those with more rapid and lethal infections. Second, we will significantly decrease the amount of broad-spectrum antibiotics used when specific testing of the pathogen is being done. This will reduce the possibility of the pathogen to develop new resistances. Finally, with enough sequencing done on the same pathogen, there is a bigger likelihood that new mutations that causes antibiotic resistance will be discovered. [<sup>[8]</sup>](https://doi.org/10.1016/j.tube.2018.04.003)
+However, new technologies have emerged since the old days. Now we can sequence the entire genome of Mycobacterium Tuberculosis in a matter of days. There have already been multiple mutations known to cause tuberculosis to develop resistance.Bringing pathogen sequencing to hospitals will being several benefits. First, we can improve the survival rate of patients especially those with more rapid and lethal infections. Second, we will significantly decrease the amount of broad-spectrum antibiotics used when specific testing of the pathogen is being done. This will reduce the possibility of the pathogen to develop new resistances. Finally, with enough sequencing done on the same pathogen, there is a bigger likelihood that new mutations that causes antibiotic resistance will be discovered. [<sup>[9]</sup>](https://doi.org/10.1016/j.tube.2018.04.003)
 
 Now focusing on the mutations detected and how they affect protein expression. We are particularly interested in the mutations that may cause the resistance:
 
@@ -166,7 +166,7 @@ Because of the specific proteins that the mutations affect, there can be conclud
 
 ## Alternative Methods
 ### Galaxy Tool Variant Calling Pipeline
-Another demo using the Galaxy tool for variant calling in different settings (diploid/haploid, somatic/germline).
+Other variations of the process can use different algorithms to identify variations. The bioinformatics webtool Galaxy includes several pipelines for variant analysis that are optimized for different sample types. The tutorials found [here](https://galaxyproject.github.io/training-material/topics/variant-analysis/) take into consideration sequence characteristics of diploid, haploid, somatic, and germline sample reads.
 
 
 ## References:
@@ -207,7 +207,5 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 
 [x] High-Coverage Samples
 * Li, Heng (2014). Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics, 30-20:2843-2451. DOI: [10.1093/bioinformatics/btu356](https://doi.org/10.1093/bioinformatics/btu356)
-
-[x] [Basic pipeline](https://datacarpentry.org/wrangling-genomics/04-variant_calling/index.html)
 
 [x] [Galaxy pipelines](https://galaxyproject.github.io/training-material/topics/variant-analysis/)
