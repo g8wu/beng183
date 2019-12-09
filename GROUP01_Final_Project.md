@@ -80,6 +80,7 @@ fastqc -o . \path\to\read_1.fastq.gz \path\to\read_2.fastq.gz
 
 *Figure 3b: Per base sequence quality of read file 2 before and after trimming*
 <br>
+<br>
 
 Using Sickle, trim ends with QC score threshold 30
 (INSERT FLAG DETAILS)
