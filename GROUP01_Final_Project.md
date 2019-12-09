@@ -43,9 +43,6 @@ After the whole genome or exome is sequenced, the raw reads in FASTQ files are q
 
 Because this is a comparative analysis, the algorithms can differ depending on sample type. There are many packages and pipelines that have been developed to accommodate for diploidy, somatic cells, and germline cells.
 
-## Significance
-More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
-
 ## Demo
 We demonstrate an analysis pipeline for identifying tuberculosis related SNPs starting from analysis ready reads to final VCF file visualizations. The tools used:
 *  **FastQC**: quality check and trimming of reads[<sup>[4]</sup>](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
@@ -125,6 +122,13 @@ rm *.sam *.bam *.mpileup *raw.vcf
 ```
 
 Variant calling complete! You can view the final vcf file with variant locations and sequnces using any plain text reader or spreadsheet software (i.e. import to Microsoft Excel and select "Tab" when it prompts you what delimiter is used).
+
+## Significance
+A patient goes to hospital after showing classical food poisoning symptoms. After rapid testing, an E. Coli infection was confirmed. However, the specific type of E. Coli he contracted is antibiotic resistant. Luckily, because of the growth rate of E. Coli, specific testing can be done with different antibiotic trials to figure out which one will improve his condition at a relatively fast rate. But if the patient is unlucky and contracted a slow-growing pathogen like Mycobacterium tuberculosis, the specific testing that need to be done will take as long as eight weeks to complete. During that process, doctors must take a leap of faith and guess which antibiotic mix he needs to use to prevent the patient's condition from worsening. (Peacock)
+
+However, new technologies have emerged since the old days. Now we can sequence the entire genome of Mycobacterium Tuberculosis in a matter of days. There have already been multiple mutations known to cause tuberculosis to develop resistance.Bringing pathogen sequencing to hospitals will being several benefits. First, we can improve the survival rate of patients especially those with more rapid and lethal infections. Second, we will significantly decrease the amount of broad-spectrum antibiotics used when specific testing of the pathogen is being done. This will reduce the possibility of the pathogen to develop new resistances. Finally, with enough sequencing done on the same pathogen, there is a bigger likelihood that new mutations that causes antibiotic resistance will be discovered. (Feliciano)
+
+More discussion on applications of variant calling. Examples include [Feliciano, 2018].(https://doi.org/10.1016/j.tube.2018.04.003)
 
 ## Alternative Methods
 ### Galaxy Tool Variant Calling Pipeline
