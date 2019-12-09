@@ -193,6 +193,8 @@ Another demo using the Galaxy tool for variant calling in different settings (di
 [8] Whole Genome Sequencing Accuracy
 * Feliciano, Cinara S. et al. (2018). Accuracy of whole genome sequencing versus phenotypic (MGIT) and commercial molecular tests for detection of drug-resistant Mycobacterium tuberculosis isolated from patients in Brazil and Mozambique. Tuberculosis, 110:59-67. DOI: [10.1016/j.tube.2018.04.003](https://doi.org/10.1016/j.tube.2018.04.003)
 
+[9] Sharon Peacock. "Health care: Bring microbial sequencing to hospitals." Nature. 22 May 2014. Print.
+
 [x] High-Coverage Samples
 * Li, Heng (2014). Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics, 30-20:2843-2451. DOI: [10.1093/bioinformatics/btu356](https://doi.org/10.1093/bioinformatics/btu356)
 
