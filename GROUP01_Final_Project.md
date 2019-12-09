@@ -54,7 +54,7 @@ We demonstrate an analysis pipeline for identifying tuberculosis related SNPs st
 * **VarScan**: variant calling[<sup>[7]</sup>](http://dkoboldt.github.io/varscan/)
 
 ### Demo Files
-Sequenced read files:----------------[<sup>8</sup>](https://doi.org/10.1016/j.tube.2018.04.003)
+Sequenced read files: Feliciano, Cinara S. et al. (2018)[<sup>[8]</sup>](https://doi.org/10.1016/j.tube.2018.04.003)
 
 Reference Genome: [Mycobacterium tuberculosis H37Rv NCBI database](https://www.ncbi.nlm.nih.gov/nuccore/NC_000962.3?report=fasta)
 
